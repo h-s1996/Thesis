@@ -64,12 +64,11 @@ utterances = [
         "Aproveite.", # 24
 
         "Bom dia",
-        "Bom dia",  # 19
+        "Bom dia",  # 25
         "Hoje vai estar por onde?",
-        "Sala de convívio e você?",  # 20
+        "Sala de convívio e você?",  # 26
         "Eu vou lá estar a fazer atividades",
-        "Vemo-nos lá."  # 21
-
+        "Vemo-nos lá."  # 27
 ]
 
 MIN_FREQ = 2
@@ -80,7 +79,7 @@ human_utterances = utterances[::2]
 robot_utterances = utterances[1::2]
 
 # azure
-human_keywords = ['sol', 'meteorologia', 'fico contente', 'volta', 'casa', 'filho', 'atividades', 'alegria', 'passeio']
+human_keywords = ['fico contente', 'queria', 'olá', 'fico', 'queria passear', 'meteorologia', 'sol', 'gostaria', 'passeio', 'contente', 'volta', 'tempo', 'atividades', 'casa', 'vou', 'devo', 'passear', 'alegria', 'sair', 'filho', 'durante']
 robot_keywords = ['nuvens no céu', 'sala de convívio', 'vemo', 'meteorologia', 'proveito', 'passeio']
 
 ###########################

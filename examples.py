@@ -116,6 +116,11 @@ utterances = [
 
 ]
 
+# azure
+human_keywords = ['sol', 'meteorologia', 'fico contente', 'volta', 'casa', 'filho', 'atividades', 'alegria', 'passeio']
+robot_keywords = ['nuvens no céu', 'sala de convívio', 'vemo', 'meteorologia', 'proveito', 'passeio']
+
+
 # yake
 
 # TUDO JUNTO
@@ -141,3 +146,7 @@ utterances = [
 #human_keywords = ['tempo', 'queria', 'passear', 'hoje', 'está', 'sol', 'passeio', 'meteorologia', 'fico', 'contente', 'volta', 'hoje', 'para', 'sol', 'gostaria', 'casa', 'alegria']
 #robot_keywords = ['tempo', 'fantástico', 'faça', 'proveito', 'maravilhoso', 'então', 'divirta-se', 'solarengo', 'céu', 'estará', 'tenha', 'passeio', 'inteiro', 'boa', 'meteorologia', 'aproveite', 'existem', 'nuvens']
 
+
+human_keywords = ['fico contente', 'queria', 'olá', 'fico', 'queria passear', 'meteorologia', 'sol', 'gostaria', 'passeio', 'contente', 'volta', 'tempo', 'atividades', 'casa', 'vou', 'devo', 'passear', 'alegria', 'sair', 'filho', 'durante']
+
+human_keywords = ['tempo', 'queria', 'passear', 'queria passear', ]
