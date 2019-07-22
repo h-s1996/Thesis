@@ -39,7 +39,8 @@ class Examples:
         return aux
 
     def search_for_phrase(self, lsa, classifier, phrase, keywords):
-        phrase_id = classifier.predict(lsa.process_phrase(phrase, lsa.manage_keywords(keywords)))
+        lsa_result = lsa.process_phrase(phrase, lsa.manage_keywords(keywords))
+        phrase_id = classifier.predict(LSA.normalizer(lsa_result))
         for e in self.examples:
             if e.id == phrase_id:
                 return e.phrase
@@ -119,7 +120,6 @@ class LSA:
                               token_pattern=r'\w{1,}',
                               ngram_range=(self.ngram_min, self.ngram_max))
         x = vec.fit_transform(examples)
-
         return x
 
     def choose_dimensionality(self, phrase, keywords):
@@ -194,4 +194,4 @@ class NaivesClassifier:
         self.classifier.fit(x_naive, y_train)
 
     def predict(self, value):
-        return self.classifier.predict(numpy.reshape(LSA.normalizer(value), (1, len(value))))
+        return self.classifier.predict(numpy.reshape(value, (1, len(value))))

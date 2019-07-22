@@ -61,7 +61,14 @@ utterances = [
         "Vai estar onde durante o dia?",
         "Sala de convívio e você?",  # 23
         "Devo ir até a casa do meu filho",
-        "Aproveite."  # 24
+        "Aproveite.", # 24
+
+        "Bom dia",
+        "Bom dia",  # 19
+        "Hoje vai estar por onde?",
+        "Sala de convívio e você?",  # 20
+        "Eu vou lá estar a fazer atividades",
+        "Vemo-nos lá."  # 21
 
 ]
 
@@ -102,11 +109,12 @@ human_vectors = Examples(human_utterances, human_results)
 naives = NaivesClassifier()
 
 naives.train(numpy.array(human_vectors.lsa_s), robot_vectors.get_ids())
-print(robot_vectors.search_for_phrase(human_lsa, naives, "Hoje está sol?", human_keywords))
-print(robot_vectors.search_for_phrase(human_lsa, naives, "Qual é a meteorologia para este dia?", human_keywords))
-print(robot_vectors.search_for_phrase(human_lsa, naives, "A meteorologia dá sol para hoje?", human_keywords))
-print(robot_vectors.search_for_phrase(human_lsa, naives, "Hoje vai estar por onde?", human_keywords))
+
 print(robot_vectors.search_for_phrase(human_lsa, naives, "Devo ir até à casa do meu filho.", human_keywords))
+print(robot_vectors.search_for_phrase(human_lsa, naives, "A meteorologia dá sol para hoje?", human_keywords))
+print(robot_vectors.search_for_phrase(human_lsa, naives, "Qual é a meteorologia para este dia?", human_keywords))
+print(robot_vectors.search_for_phrase(human_lsa, naives, "Hoje vai estar por onde?", human_keywords))
+print(robot_vectors.search_for_phrase(human_lsa, naives, "Hoje está sol?", human_keywords))
 print(robot_vectors.search_for_phrase(human_lsa, naives, "Também vou lá estar a fazer atividades.", human_keywords))
 
 ###########################
