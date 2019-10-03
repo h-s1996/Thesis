@@ -1,6 +1,7 @@
-from classes import LSA, Examples, Clustering, NaivesClassifier
-from pylab import *
+from classes import LSA, Examples, NaivesClassifier, SpeakWithTheRobot
+
 import numpy
+
 
 ###############################################################################
 #  Initializing
@@ -68,7 +69,33 @@ utterances = [
         "Hoje vai estar por onde?",
         "Sala de convívio e você?",  # 26
         "Eu vou lá estar a fazer atividades",
-        "Vemo-nos lá."  # 27
+        "Vemo-nos lá.",  # 27
+
+        "Bom dia",
+        "Bom dia",  # 28
+        "Hoje vai fazer o quê?",
+        "Hoje é dia de votar.",  # 29
+        "Muito bem, eu já votei.",
+        "Em quem votou?",  # 30
+        "O voto é secreto não lhe posso dizer.",
+        "Tem razão.",  # 30
+
+        "Bom dia",
+        "Bom dia",  # 28
+        "Hoje vai fazer o quê?",
+        "Hoje é dia de votar.",  # 29
+        "Muito bem, eu já votei.",
+        "Em quem votou?",  # 30
+        "O voto é secreto não lhe posso dizer.",
+        "Tem razão.",  # 30
+
+        "Alô, alô meninos está tudo bem?",
+        "Com licença, eu sei isso não me comunico.",
+
+        "Bom tarde",
+        "Bom dia",
+        "Já passa do meio-dia.",
+        "Bom dia é todo o dia puta."
 ]
 
 MIN_FREQ = 2
@@ -79,7 +106,7 @@ human_utterances = utterances[::2]
 robot_utterances = utterances[1::2]
 
 # azure
-human_keywords = ['fico contente', 'queria', 'olá', 'fico', 'queria passear', 'meteorologia', 'sol', 'gostaria', 'passeio', 'contente', 'volta', 'tempo', 'atividades', 'casa', 'vou', 'devo', 'passear', 'alegria', 'sair', 'filho', 'durante']
+human_keywords = ['sol', 'meteorologia', 'fico contente', 'volta', 'casa', 'filho', 'atividades', 'alegria', 'passeio']
 robot_keywords = ['nuvens no céu', 'sala de convívio', 'vemo', 'meteorologia', 'proveito', 'passeio']
 
 ###########################
@@ -93,10 +120,11 @@ robot_results, cluster_results = robot_lsa.process_robot_examples(robot_lsa.mana
 
 ###########################
 # ONLY FOR ROBOT UTTERANCES
-figure(0)
-c = Clustering(cluster_results, len(robot_utterances))
-d = c.cluster()
-robot_clusters = c.get_clusters(9)
+# figure(0)
+# c = Clustering(cluster_results, len(robot_utterances))
+# d = c.cluster()
+# robot_clusters = c.get_clusters(9)
+# show()
 ###########################
 
 ###########################
@@ -106,15 +134,11 @@ human_vectors = Examples(human_utterances, human_results)
 # robot_vectors.cluster(robot_clusters)  # comment it if you do not want clustering
 
 naives = NaivesClassifier()
-
 naives.train(numpy.array(human_vectors.lsa_s), robot_vectors.get_ids())
 
-print(robot_vectors.search_for_phrase(human_lsa, naives, "Devo ir até à casa do meu filho.", human_keywords))
-print(robot_vectors.search_for_phrase(human_lsa, naives, "A meteorologia dá sol para hoje?", human_keywords))
-print(robot_vectors.search_for_phrase(human_lsa, naives, "Qual é a meteorologia para este dia?", human_keywords))
-print(robot_vectors.search_for_phrase(human_lsa, naives, "Hoje vai estar por onde?", human_keywords))
-print(robot_vectors.search_for_phrase(human_lsa, naives, "Hoje está sol?", human_keywords))
-print(robot_vectors.search_for_phrase(human_lsa, naives, "Também vou lá estar a fazer atividades.", human_keywords))
+###########################
+# SPEAKING WITH THE ROBOT
+sr = SpeakWithTheRobot(human_lsa, naives, human_keywords, robot_vectors)
+sr.speaking_to_the_robot()
 
 ###########################
-show()

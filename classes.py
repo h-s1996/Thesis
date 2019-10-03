@@ -2,14 +2,18 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from scipy.cluster.hierarchy import dendrogram, linkage
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.decomposition import TruncatedSVD
-from sklearn.naive_bayes import MultinomialNB, BernoulliNB
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.preprocessing import Normalizer
 from sklearn.pipeline import make_pipeline
 from nltk.corpus import stopwords
 from nltk.stem import RSLPStemmer
+import speech_recognition as sr
+from gtts import gTTS
 import string
 import numpy
 import nltk
+import sys
+import os
 
 
 class Examples:
@@ -22,8 +26,19 @@ class Examples:
     def populate(self):
         examples = []
         for i in range(0, len(self.phrases)):
-            examples.append(Example(self.phrases[i], self.lsa_s[i], i + 1))
+            id_phrase = self.check_phrase(self.phrases[i], i)
+            examples.append(Example(self.phrases[i], self.lsa_s[i], id_phrase + 1))
         return examples
+
+    def check_phrase(self, phrase, id_phrase):
+        for j in range(0, len(self.phrases)):
+            if id_phrase != j:
+                if self.phrases[j] == phrase:
+                    if id_phrase > j:
+                        return j
+                    else:
+                        return id_phrase
+        return id_phrase
 
     def cluster(self, clusters):
         for e in self.examples:
@@ -104,7 +119,7 @@ class LSA:
         vec = TfidfVectorizer(min_df=self.min_freq,
                               stop_words=self.stopwords,
                               tokenizer=self.tokenize,
-                              token_pattern=r'\w{1,}',
+                              norm=None,
                               ngram_range=(self.ngram_min, self.ngram_max))
         vec.fit_transform(self.phrases)
         return vec.get_feature_names()
@@ -116,8 +131,8 @@ class LSA:
             examples.append(phrase)
         vec = TfidfVectorizer(stop_words=self.stopwords,
                               vocabulary=keywords,
+                              norm=None,
                               tokenizer=self.tokenize,
-                              token_pattern=r'\w{1,}',
                               ngram_range=(self.ngram_min, self.ngram_max))
         x = vec.fit_transform(examples)
         return x
@@ -194,4 +209,49 @@ class NaivesClassifier:
         self.classifier.fit(x_naive, y_train)
 
     def predict(self, value):
-        return self.classifier.predict(numpy.reshape(value, (1, len(value))))
+        aux = self.classifier.predict(numpy.reshape(value, (1, len(value))))
+        return aux
+
+
+class SpeakWithTheRobot:
+    def __init__(self, human_lsa, naives, human_keywords, robot_vectors):
+        self.slow = False
+        self.device_id = 0
+        self.lang = 'pt-pt'
+        self.naives = naives
+        self.chunk_size = 2048
+        self.r = sr.Recognizer()
+        self.sample_rate = 48000
+        self.human_lsa = human_lsa
+        self.robot_vectors = robot_vectors
+        self.human_keywords = human_keywords
+
+    def hear(self):
+        with sr.Microphone(device_index=self.device_id, sample_rate=self.sample_rate, chunk_size=self.chunk_size) as source:
+            self.r.adjust_for_ambient_noise(source)
+            print("Say Something")
+            audio = self.r.listen(source)
+            try:
+                text = self.r.recognize_google(audio, language="pt-PT")
+                print("you said: " + text)
+                return text
+            except sr.UnknownValueError:
+                print("Google Speech Recognition could not understand audio")
+            except sr.RequestError as e:
+                print("Could not request results from Google Speech Recognition service;{0}".format(e))
+
+    def speak(self, phrase):
+        tts = gTTS(text=phrase, lang=self.lang, slow=self.slow)
+        tts.save("soundfile.mp3")
+        os.system("mpg123 soundfile.mp3")
+        return
+
+    def speaking_to_the_robot(self):
+        while True:
+            print("Press a character")
+            c = sys.stdin.read(1)
+            if c == 's':
+                self.speak(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, self.hear(),
+                                                                self.human_keywords))
+            elif c == 'q':
+                break
