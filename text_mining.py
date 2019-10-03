@@ -88,14 +88,6 @@ utterances = [
         "Em quem votou?",  # 30
         "O voto é secreto não lhe posso dizer.",
         "Tem razão.",  # 30
-
-        "Alô, alô meninos está tudo bem?",
-        "Com licença, eu sei isso não me comunico.",
-
-        "Bom tarde",
-        "Bom dia",
-        "Já passa do meio-dia.",
-        "Bom dia é todo o dia puta."
 ]
 
 MIN_FREQ = 2
