@@ -117,6 +117,7 @@ utterances = [
 ]
 
 # azure
+
 human_keywords = ['sol', 'meteorologia', 'fico contente', 'volta', 'casa', 'filho', 'atividades', 'alegria', 'passeio']
 robot_keywords = ['nuvens no céu', 'sala de convívio', 'vemo', 'meteorologia', 'proveito', 'passeio']
 

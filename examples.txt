@@ -1,0 +1,204 @@
+0
+H Bom dia.
+H Olá.
+R Bom dia. Tudo bem?
+1
+H Boa tarde.
+R Boa tarde. Como está?
+0
+H Boa noite.
+R Boa noite. Passou bem o dia?
+1
+H Não muito bem. E você?
+H Estou péssimo. E você?
+H Estou mal. E você?
+H Sinto-me triste. E você?
+R Comigo está tudo a andar. Que se passa?
+R Comigo está tudo a andar. Aconteceu alguma coisa?
+0
+H Estou doente. E você?
+H Tenho dores de cabeça. E você?
+H Estou mal do estômago. E você?
+H Estou mal das pernas. E você?
+R Eu estou bem. Dói-lhe muito?
+1
+H Assim assim. E você?
+H Vai-se andando. E você?
+R Sim, está tudo bem. Passa-se alguma coisa?
+0
+H Estou bem. E você?
+H Estou ótimo. E você?
+H Tudo bem. E você?
+H Sinto-me bem. E você?
+R Randomchoice1
+1
+H Sim, consegui descansar esta noite. E você?
+H Sim, dormi esta noite. E você?
+H Sim, descansei esta noite. E tu?
+R Os robots não precisam.
+0
+H Sim, consegui dormir esta noite.
+H Sim, consegui descansar esta noite.
+H Sim, dormi esta noite.
+H Sim, descansei esta noite.
+H Vou tentar descansar mais um pouco.
+R ConversationTopic
+1
+H Não dormi bem.
+H Não consegui descansar
+H Não consegui. E você/tu?
+H Não consegui dormir bem.
+R Teve dificuldades em adormecer?
+0
+H Sim, estava complicado adormecer.
+H Sim, foi difícil descansar.
+R Costuma ter insónias?
+1
+H Sim, custa-me sempre adormecer.
+H Sim, as noites são sempre difíceis.
+R Tente descansar um pouco mais tarde.
+0
+H Não, nunca tenho insónias.
+H Não, raramente tenho dificuldade em adormecer.
+R Preocupa-lhe alguma coisa?
+1
+H Não, tenho a mente tranquila.
+H Não, até foi fácil adormecer.
+R Então qual é o problema?
+1
+H Sim, estou muito preocupado.
+H Sim, estou bastante preocupada.
+R Quer falar sobre isso?
+0
+H Preferia não falar sobre isto.
+H Não quero falar sobre isso.
+H Não é nada de especial.
+H Não é importante.
+R Compreendo, se quiser falar cá estarei.
+1
+H Sim, gostaria de falar sobre isto.
+R Sou todo ouvidos.
+0
+H Vou tentar descansar mais um pouco.
+R ConversationTopic
+1
+H Não me dói muito.
+R Tome cuidado com a sua saúde.
+0
+H Sim dói-me.
+H Ainda me dói um pouco.
+R Já foi ao médico?
+1
+H Ainda não mas já marquei consulta.
+H Já marquei consulta.
+R Agora é ficar à espera.
+0
+H Ainda não fui ao médico.
+H Não, tenho de ir ao médico.
+H Não, preciso de ir ao médico.
+R Então é melhor marcar a consulta.
+1
+H Vou já marcar a consulta. Obrigado.
+H Então é melhor marcar a consulta já. Obrigado.
+H Obrigado.
+R De nada.
+0
+H Já fui ao médico.
+R E está a tomar os medicamentos?
+1
+H Sim estou mas só comecei ontem.
+H Vou começar hoje.
+R Então é preciso esperar ainda.
+0
+H Já estou a tomar os medicamentos há uns dias e nada.
+H Sim mas acho que os medicamentos não estão a fazer efeito.
+H Sim mas ainda não senti a doença melhorar.
+R Pode esperar mais uns dias ou então volte ao médico.
+1
+H Vou esperar mais um dia.
+H É melhor voltar ao médico então.
+R Faça o que achar melhor.
+0
+H Como está o tempo hoje?
+H Qual é a meteorologia para este dia?
+H Qual é a meteorologia para hoje?
+R Hoje está um tempo fantástico.
+R Não existe nuvens no céu, estará sempre solarengo.
+R Hoje está um tempo maravilhoso.
+1
+H Hoje está sol?
+H A meteorologia dá sol para hoje?
+R Sim, está um tempo maravilhoso.
+R Sim, para o dia inteiro.
+R Sim, não existem nuvens no céu.
+0
+H Hoje quero passear.
+H Vou dar um passeio.
+H Quero dar uma volta.
+H Vou sair de casa hoje.
+H Hoje vou dar uma volta.
+H Hoje vou fazer uma excursão.
+R Faça bom proveito.
+R Então divirta-se.
+R Tenha um bom passeio.
+R Aproveite o bom tempo.
+1
+H Hoje vou tomar um café.
+H Hoje vou ao café.
+R Vai tomar café com alguém?
+0
+H Vou hoje ao supermercado.
+H Hoje vou às compras, preciso de comida.
+H Vou às lojas de roupa hoje.
+H Hoje vou ao centro comercial.
+R O que é que vai comprar?
+1
+H Hoje vai estar por onde?
+H Vai estar onde durante o dia?
+R Sala de convívio e você?
+0
+H Também vou lá estar a fazer atividades.
+H Eu vou lá estar a fazer atividades.
+R Vemo-nos lá.
+1
+H Devo ir até a casa do meu filho.
+H Hoje vou estar com a meu filho.
+H Vou jantar hoje com a minha filha.
+H Hoje vou almoçar com o meu irmão.
+H Vou à casa da minha filha.
+H Hoje vou passar o dia com os meus netos.
+R Aproveite o tempo com a sua família.
+0
+H Estou sempre bem.
+H Estou sempre ótimo.
+H Não, é preciso estar sempre de cabeça erguida.
+R Assim é que deve ser.
+1
+H Estou só bem-disposto.
+H Acordei bem hoje.
+H Estou só bem-disposta.
+R Ainda bem, fico contente.
+0
+H Sim, tenho falado com a minha família todos os dias.
+H Sim, falei com eles algumas vezes esta semana.
+R Como está a sua família?
+1
+H Não, raramente falo com a minha família.
+H Não tenho família.
+R Tenho pena.
+R Peço desculpa.
+0
+H Não faz mal.
+H Um engano acontece.
+H Não há problema.
+H Errar é humano.
+R ConversationTopic
+
+#human_keywords = ['médico', 'consulta', 'casa', 'meteorologia', 'família',
+                 'ótimo', 'pouco', 'medicamentos', 'filha', 'tomar', 'café',
+                  'sol', 'filho', 'volta', 'atividades', 'dores de cabeça',
+                  'cabeça erguida', 'mente tranquila', 'compras', 'comida',
+                  'lojas de roupa', 'centro comercial', 'efeito', 'jantar',
+                  'doente', 'estômago', 'pernas', 'insónias', 'dificuldade',
+                  'especial', 'doença', 'passeio', 'excursão', 'supermercado',
+                  'irmão', 'netos', 'disposto', 'vezes', 'engano', 'problema']

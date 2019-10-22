@@ -1,14 +1,10 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
-from scipy.cluster.hierarchy import dendrogram, linkage
-from sklearn.cluster import AgglomerativeClustering
-from sklearn.decomposition import TruncatedSVD
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.preprocessing import Normalizer
-from sklearn.pipeline import make_pipeline
 from nltk.corpus import stopwords
 from nltk.stem import RSLPStemmer
 import speech_recognition as sr
 from gtts import gTTS
+import random
 import string
 import numpy
 import nltk
@@ -16,18 +12,56 @@ import sys
 import os
 
 
+class File:
+
+    def __init__(self):
+        self.examples = []
+        file = open('newtextfile.txt', 'r')
+        groups = []
+        group = False
+        try:
+            line = file.readline()
+            while line != '':  # The EOF char is an empty string
+                if line[0].isdigit():
+                    group = Group()
+                    groups.append(group)
+                else:
+                    if group:
+                        if line[0] == 'H':
+                            group.human.append(line[2:-1])
+                        if line[0] == 'R':
+                            group.robot.append(line[2:-1])
+                line = file.readline()
+            #TODO HOW MANY RANDOMIZE SHOULD IT DO
+            for g in groups:
+                self.randomize(g)
+                self.randomize(g)
+        finally:
+            file.close()
+
+    def randomize(self, group):
+        for i in range(0, len(group.human)):
+            self.examples.append(group.human[i])
+            self.examples.append(random.choice(group.robot))
+
+
+class Group:
+    def __init__(self):
+        self.human = []
+        self.robot = []
+
+
 class Examples:
 
-    def __init__(self, phrases, lsa_s):
+    def __init__(self, phrases):
         self.phrases = phrases
-        self.lsa_s = numpy.array(lsa_s)
         self.examples = self.populate()
 
     def populate(self):
         examples = []
         for i in range(0, len(self.phrases)):
             id_phrase = self.check_phrase(self.phrases[i], i)
-            examples.append(Example(self.phrases[i], self.lsa_s[i], id_phrase + 1))
+            examples.append(Example(self.phrases[i], id_phrase + 1))
         return examples
 
     def check_phrase(self, phrase, id_phrase):
@@ -39,13 +73,6 @@ class Examples:
                     else:
                         return id_phrase
         return id_phrase
-
-    def cluster(self, clusters):
-        for e in self.examples:
-            for cluster in clusters:
-                for elem in cluster:
-                    if elem == e.id:
-                        e.id = cluster[0]
 
     def get_ids(self):
         aux = []
@@ -63,10 +90,9 @@ class Examples:
 
 class Example:
 
-    def __init__(self, phrase, lsa, number):
+    def __init__(self, phrase, number):
         self.id = number
         self.phrase = phrase
-        self.lsa = lsa
 
 
 class LSA:
@@ -81,6 +107,7 @@ class LSA:
         self.phrases = phrases
         self.u = []
         self.features_utterance = self.get_features_utterance()
+        self.tfidf = []
 
     @staticmethod
     def normalizer(x_abnormal):
@@ -90,8 +117,10 @@ class LSA:
         return x_new
 
     def tokenize(self, t):
+        if t in self.stopwords:
+            return []
         sentence = t.lower()
-        sentence = nltk.word_tokenize(sentence)
+        sentence = nltk.tokenize.word_tokenize(sentence)
         aux = []
         for word in sentence:
             if word not in self.stopwords and word not in string.punctuation:
@@ -104,7 +133,14 @@ class LSA:
     def manage_keywords(self, keywords):
         tokens, vocabulary = [], []
         for i in keywords:
-            tokens.extend(self.tokenize(i))
+            t = self.tokenize(i)
+            if len(t) > 1:
+                key_str = ''
+                for j in t:
+                    key_str = key_str + ' ' + j
+                tokens.append(key_str[1:])
+            else:
+                tokens.extend(t)
         for i in tokens:
             repeat = False
             for v in vocabulary:
@@ -119,7 +155,6 @@ class LSA:
         vec = TfidfVectorizer(min_df=self.min_freq,
                               stop_words=self.stopwords,
                               tokenizer=self.tokenize,
-                              norm=None,
                               ngram_range=(self.ngram_min, self.ngram_max))
         vec.fit_transform(self.phrases)
         return vec.get_feature_names()
@@ -131,32 +166,30 @@ class LSA:
             examples.append(phrase)
         vec = TfidfVectorizer(stop_words=self.stopwords,
                               vocabulary=keywords,
-                              norm=None,
                               tokenizer=self.tokenize,
                               ngram_range=(self.ngram_min, self.ngram_max))
         x = vec.fit_transform(examples)
-        return x
+        return x.todense()
 
-    def choose_dimensionality(self, phrase, keywords):
+    def eliminate_dimensions(self):
         res = 0
-        eigenvalues = numpy.linalg.svd(self.tf_idf(phrase, keywords).todense(), compute_uv=False)
-        normalized_eigenvalues = eigenvalues / numpy.sum(eigenvalues)
-        for i in range(0, len(eigenvalues)):
+        u, eigen, v = numpy.linalg.svd(self.tfidf, compute_uv=True)
+        normalized_eigenvalues = eigen / numpy.sum(eigen)
+        eigenvalues = numpy.diag(eigen)
+        for i in range(0, len(eigen)):
             res += normalized_eigenvalues[i]
             if res >= self.p_eig:
-                return i + 1
-
-    def reduce_dimensionality(self, phrase, keywords):
-        svd = TruncatedSVD(n_components=self.choose_dimensionality(phrase, keywords), algorithm="arpack")
-        lsa = make_pipeline(svd, Normalizer(copy=False))  # normalize data
-        u = lsa.fit_transform(self.tf_idf(phrase, keywords))
-        x = numpy.matrix.dot(u, svd.components_)
-        return x, u
+                k = i+1
+                x = numpy.matrix.dot(numpy.matrix.dot(u[-1, 0:k], eigenvalues[0:k, 0:k]), v[0:k, :])
+                return x
 
     def process_phrase(self, phrase, keywords):
-        x_utterance, u_utterance = self.reduce_dimensionality(phrase, self.features_utterance)
-        x_keywords, u_keywords = self.reduce_dimensionality(phrase, keywords)
-        return numpy.round(numpy.concatenate([x_utterance[len(x_utterance) - 1], x_keywords[len(x_keywords) - 1]]), 10)
+        tfidf_utterance = numpy.array(self.tf_idf(phrase, self.features_utterance))
+        tfidf_keywords = numpy.array(self.tf_idf(phrase, keywords))
+        self.tfidf = numpy.empty([len(tfidf_utterance), len(tfidf_utterance[0]) + len(tfidf_keywords[0])])
+        self.tfidf = numpy.concatenate([tfidf_utterance, tfidf_keywords], axis=1)
+        x = numpy.round(self.eliminate_dimensions(), 10)
+        return x
 
     def process_examples(self, keywords):
         lsa = []
@@ -164,43 +197,11 @@ class LSA:
             lsa.append(self.process_phrase(phrase, keywords).tolist())
         return lsa
 
-    def process_robot_examples(self, keywords):
-        x_utterance, u_utterance = self.reduce_dimensionality([], self.features_utterance)
-        x_keywords, u_keywords = self.reduce_dimensionality([], keywords)
-        return numpy.round(numpy.concatenate([x_utterance.T, x_keywords.T]).T, 10).tolist(), numpy.round(
-            numpy.concatenate([u_utterance.T, u_keywords.T]).T, 10).tolist()
-
-
-class Clustering:
-
-    def __init__(self, lsa, n_phrases):
-        self.lsa = lsa
-        self.n_phrases = n_phrases
-
-    def cluster(self):
-        return dendrogram(linkage(self.lsa, 'single'),
-                          orientation='top',
-                          labels=numpy.array(range(1, self.n_phrases + 1)))  # clustering measures
-
-    def get_clusters(self, n_clusters):
-        c = AgglomerativeClustering(n_clusters=n_clusters, affinity='euclidean', linkage='single')
-        c.fit(self.lsa)
-        labels = c.labels_
-        clusters = []
-        cluster = []
-        for i in range(0, n_clusters):
-            for j in range(0, len(labels)):
-                if labels[j] == i:
-                    cluster.append(j + 1)
-            clusters.append(cluster)
-            cluster = []
-        return clusters
-
 
 class NaivesClassifier:
 
     def __init__(self):
-        self.classifier = MultinomialNB(alpha=1.0e-10)
+        self.classifier = MultinomialNB(alpha=0.01)
 
     def train(self, x_train, y_train):
         x_naive = numpy.empty(x_train.shape)
@@ -249,9 +250,23 @@ class SpeakWithTheRobot:
     def speaking_to_the_robot(self):
         while True:
             print("Press a character")
-            c = sys.stdin.read(1)
-            if c == 's':
+            c = sys.stdin.read(2)
+            if c[0] == 's':
                 self.speak(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, self.hear(),
                                                                 self.human_keywords))
-            elif c == 'q':
+            elif c[0] == 't':
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Olá", self.human_keywords))
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Como está tudo a andar?",
+                                                           self.human_keywords))
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Comigo está tudo fantástico.",
+                                                           self.human_keywords))
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Como está tudo a andar?",
+                                                           self.human_keywords))
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Qual é o tempo para hoje?",
+                                                           self.human_keywords))
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Hoje vou almoçar com o meu filho.",
+                                                           self.human_keywords))
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Vou ao centro comercial à tarde.",
+                                                           self.human_keywords))
+            elif c[0] == 'q':
                 break
