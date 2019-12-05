@@ -143,9 +143,9 @@ R Então divirta-se.
 R Tenha um bom passeio.
 R Aproveite o bom tempo.
 1
-H Hoje vou tomar um café.
-H Hoje vou ao café.
-R Vai tomar café com alguém?
+H Gosto de tomar um café.
+H Gosto de café.
+R Eu também, o sabor é ótimo.
 0
 H Vou hoje ao supermercado.
 H Hoje vou às compras, preciso de comida.

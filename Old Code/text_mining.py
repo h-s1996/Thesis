@@ -9,12 +9,10 @@ f = File()
 
 MIN_FREQ = 2
 MAX_GRAM = 2
-P_EIG = 0.6
+P_EIG = 0.5
 human_utterances = f.examples[::2]
 robot_utterances = f.examples[1::2]
-
-# azure
-human_keywords = ['meteorologia', 'filha', 'casa', 'lojas de roupa', 'centro comercial', 'filho', 'compras', 'comida', 'jantar', 'andar', 'irmão', 'netos', 'supermercado']
+human_keywords = f.keywords
 print("Data imported.")
 
 ###########################

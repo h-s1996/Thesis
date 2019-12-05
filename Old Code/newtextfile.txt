@@ -34,7 +34,30 @@ R Aproveite o tempo com a sua família.
 H Vou hoje ao supermercado.
 H Hoje vou às compras, preciso de comida.
 H Vou às lojas de roupa hoje.
-H Vou às lojas de roupa à tarde.
+H Vou às lojas à tarde.
 H Hoje vou ao centro comercial.
 H Vou ao centro comercial de manhã.
 R O que é que vai comprar?
+6
+H Hoje quero passear.
+H Vou dar um passeio.
+H Quero dar uma volta esta tarde.
+H Vou sair de casa hoje.
+H Hoje vou dar uma volta.
+H Hoje vou fazer uma excursão.
+R Faça bom proveito.
+R Então divirta-se.
+7
+H Gosto de tomar um café.
+H Adoro um café todas as manhãs.
+H Amo café.
+H Não consigo passar sem um café por dia.
+H A minha bebida favorita é café.
+R Eu também, o sabor é ótimo.
+8
+H Gosto de tomar um chá.
+H Adoro um chá todas as manhãs.
+H Amo chá.
+H Não consigo passar sem um chá por dia.
+H A minha bebida favorita é chá.
+R Eu prefiro café.

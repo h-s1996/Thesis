@@ -15,8 +15,19 @@ import os
 class File:
 
     def __init__(self):
+        self.keywords = [
+            'Gosto de bacalhau', 'Gosto da carne', 'gosto de imensas coisas', 'Gosto de gelado italiano', 'prazer falar',
+            'jantar a casa', 'casa rodeada', 'filha', 'bacalhau sabe', 'tiramisu', 'prazer na vida', 'variedade de comida',
+            'massas', 'comida italiana', 'pouco', 'frio', 'filme', 'dúvida panacota', 'amigos', 'família', 'sol', 'próxima',
+            'Vaca', 'enorme variedade de pizzas', 'cozinha italiana', 'pergunta difícil', 'Carne de porco', 'só prato favorito',
+            'imensos pratos deliciosos', 'boas', 'gelados', 'parque', 'queijjos', 'lasanhas', 'parmegianas', 'toda', 'bola',
+            'televisão no sofá', 'Impossível', 'canellonis', 'norte do país', 'estrangeiro', 'longos passeios pela cidade',
+            'pizza napolitana', 'nações', 'oportunidade', 'Não', 'chuva', 'frango assado', 'novas culturas', 'pessoa',
+            'posta de vitela', 'ragu', 'netos', 'calor', 'caminhadas', 'familiares', 'farmácia', 'série', 'mora',
+            'beira', 'acordo', 'visita', 'conversa', 'vontade', 'bocadinho', 'disposição', 'verão', 'foodie'
+        ]
         self.examples = []
-        file = open('newtextfile.txt', 'r')
+        file = open('finaltextfile.txt', 'r')
         groups = []
         group = False
         try:
@@ -113,8 +124,12 @@ class LSA:
     def normalizer(x_abnormal):
         minimum = x_abnormal.min()
         maximum = x_abnormal.max()
-        x_new = (x_abnormal - minimum) /(maximum - minimum)
-        return x_new
+
+        if minimum == maximum:
+            return x_abnormal
+        else:
+            x_new = (x_abnormal - minimum) / (maximum - minimum)
+            return x_new
 
     def tokenize(self, t):
         if t in self.stopwords:
@@ -260,13 +275,17 @@ class SpeakWithTheRobot:
                                                            self.human_keywords))
                 print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Comigo está tudo fantástico.",
                                                            self.human_keywords))
-                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Como está tudo a andar?",
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Adoro o café",
                                                            self.human_keywords))
                 print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Qual é o tempo para hoje?",
                                                            self.human_keywords))
-                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Hoje vou almoçar com o meu filho.",
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Vou à casa da minha filha.",
                                                            self.human_keywords))
-                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Vou ao centro comercial à tarde.",
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Vou ao supermercado à tarde.",
+                                                           self.human_keywords))
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Quero dar uma volta depois do almoço.",
+                                                           self.human_keywords))
+                print(self.robot_vectors.search_for_phrase(self.human_lsa, self.naives, "Gosto de chá",
                                                            self.human_keywords))
             elif c[0] == 'q':
                 break
