@@ -1,3 +1,5 @@
+
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from nltk.corpus import stopwords
@@ -15,19 +17,9 @@ import os
 class File:
 
     def __init__(self):
-        self.keywords = [
-            'Gosto de bacalhau', 'Gosto da carne', 'gosto de imensas coisas', 'Gosto de gelado italiano', 'prazer falar',
-            'jantar a casa', 'casa rodeada', 'filha', 'bacalhau sabe', 'tiramisu', 'prazer na vida', 'variedade de comida',
-            'massas', 'comida italiana', 'pouco', 'frio', 'filme', 'dúvida panacota', 'amigos', 'família', 'sol', 'próxima',
-            'Vaca', 'enorme variedade de pizzas', 'cozinha italiana', 'pergunta difícil', 'Carne de porco', 'só prato favorito',
-            'imensos pratos deliciosos', 'boas', 'gelados', 'parque', 'queijjos', 'lasanhas', 'parmegianas', 'toda', 'bola',
-            'televisão no sofá', 'Impossível', 'canellonis', 'norte do país', 'estrangeiro', 'longos passeios pela cidade',
-            'pizza napolitana', 'nações', 'oportunidade', 'Não', 'chuva', 'frango assado', 'novas culturas', 'pessoa',
-            'posta de vitela', 'ragu', 'netos', 'calor', 'caminhadas', 'familiares', 'farmácia', 'série', 'mora',
-            'beira', 'acordo', 'visita', 'conversa', 'vontade', 'bocadinho', 'disposição', 'verão', 'foodie'
-        ]
+        self.keywords = ['meteorologia', 'filha', 'casa', 'lojas de roupa', 'centro comercial', 'filho', 'compras', 'comida', 'jantar', 'andar', 'irmão', 'netos', 'supermercado']
         self.examples = []
-        file = open('finaltextfile.txt', 'r')
+        file = open('newtextfile.txt', 'r')
         groups = []
         group = False
         try:
@@ -43,7 +35,6 @@ class File:
                         if line[0] == 'R':
                             group.robot.append(line[2:-1])
                 line = file.readline()
-            #TODO HOW MANY RANDOMIZE SHOULD IT DO
             for g in groups:
                 self.randomize(g)
                 self.randomize(g)
@@ -124,6 +115,8 @@ class LSA:
     def normalizer(x_abnormal):
         minimum = x_abnormal.min()
         maximum = x_abnormal.max()
+        if minimum == maximum:
+            return x_abnormal
 
         if minimum == maximum:
             return x_abnormal
@@ -215,8 +208,8 @@ class LSA:
 
 class NaivesClassifier:
 
-    def __init__(self):
-        self.classifier = MultinomialNB(alpha=0.01)
+    def __init__(self, alpha):
+        self.classifier = MultinomialNB(alpha=alpha)
 
     def train(self, x_train, y_train):
         x_naive = numpy.empty(x_train.shape)
@@ -226,6 +219,11 @@ class NaivesClassifier:
 
     def predict(self, value):
         aux = self.classifier.predict(numpy.reshape(value, (1, len(value))))
+        return aux
+
+    def test_score(self, x_test, y_test, type_):
+        aux = self.classifier.score(x_test, y_test)*100
+        print("Performance score of the " + type_ + " set is", numpy.round(aux, 2))
         return aux
 
 

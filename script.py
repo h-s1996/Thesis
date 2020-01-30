@@ -1,14 +1,15 @@
-from classes import LSA, Examples, NaivesClassifier, File
+from classes import File, Examples, LSA, NaivesClassifier
 import numpy
 
 f = File()
 
 MIN_FREQ = 2
 MAX_GRAM = 2
-P_EIG = 0.6
+P_EIG = 0.5
 min_freq = [1, 2, 3, 4, 5, 6]
 max_gram = [1, 2, 3, 4, 5, 6]
 p_eig = [0.1, 0.2, 0.3, 0.4, 0.5, 0.55, 0.6, 0.65, 0.7, 0.8, 0.9]
+alphas = [1e-10, 0.005, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1]
 
 human_utterances = f.examples[::2]
 robot_utterances = f.examples[1::2]
@@ -22,35 +23,29 @@ test_human = ["Bom dia", "Como é que anda?", "Está tudo bem?", "Comigo está t
               "Amo tomar um chá", "Não um dia que não beba chá"]
 
 print("Data imported.")
-lsa = []
-naives = []
-results = []
 robot_vectors = Examples(robot_utterances)
+lsa = []
 
-
-# for mi in min_freq:
+#for mi in min_freq:
 #    lsa.append(LSA(MAX_GRAM, mi, P_EIG, human_utterances))
-# for ma in max_gram:
-#     lsa.append(LSA(ma, MIN_FREQ, P_EIG, human_utterances))
+#for ma in max_gram:
+#    lsa.append(LSA(ma, MIN_FREQ, P_EIG, human_utterances))
 for p in p_eig:
     lsa.append(LSA(MAX_GRAM, MIN_FREQ, p, human_utterances))
 
-print("LSAs created.")
+for l in lsa:
+    results = l.process_examples(l.manage_keywords(human_keywords))
 
-for i in range(0, 6):
-    print(i)
-    results.append(lsa[i].process_examples(lsa[i].manage_keywords(human_keywords)))
-    naives.append(NaivesClassifier())
-    try:
-        naives[i].train(numpy.array(results[i]), robot_vectors.get_ids())
-    except:
-        print("Parameters not supported")
-        continue
-    else:
-        for h in test_human:
-            try:
-                print(robot_vectors.search_for_phrase(lsa[i], naives[i], h, human_keywords))
-            except:
-                print("Phrase not recognized")
+    print("LSAs created.")
+
+    naives = NaivesClassifier(alpha=1e-10)
+    # for i in range(len(alphas)):
+    #    print(alphas[i])
+    #    naives.append(NaivesClassifier(alphas[i]))
+    naives.train(numpy.array(results), robot_vectors.get_ids())
+    for h in test_human:
+        print(robot_vectors.search_for_phrase(l, naives, h, human_keywords))
+    print('\n'*5)
+
 
 
