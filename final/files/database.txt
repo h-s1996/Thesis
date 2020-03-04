@@ -1,0 +1,499 @@
+1
+H Bom dia.
+H Olá.
+H Bom dia.
+H Bom dia.
+H Olá.
+H Olá.
+H Bom dia.
+H Bom dia.
+H Olá. Bom dia.
+H Bom dia.
+H Bom dia.
+H Olá.
+H Bom dia.
+H Bom dia.
+H Olá.
+H Olá.
+H Olá. Bom dia.
+H Bom dia.
+H Bom dia.
+H Olá. Bom dia.
+H Olá. Bom dia.
+H Bom dia.
+H Bom dia.
+H Olá.
+H Olá. Bom dia.
+H Bom dia.
+H Bom dia.
+H Olá.
+H Bom dia.
+R Bom dia. Está tudo bem?
+2
+H Está tudo bem e contigo?
+H Sim e contigo?
+H Tudo bem e contigo?
+H Está tudo e consigo?
+H Não, eu hoje estou mal disposto e você?
+H Sim, hoje estou de bom humor! E tu, como te sentes hoje?
+H Sim, e consigo?
+H Tudo ótimo! E contigo?
+H Sim, e tu como te sentes?
+H Sim. E consigo?
+H Está tudo bem. E como estás tu?
+H Está tudo bem obrigado e consigo?
+H Está sim, e tu como estás?
+H Está tudo bem e consigo?
+H Está tudo bem comigo, e contigo? Estás bem disposto?
+H Sim está tudo bem, e consigo?
+H Sim, tudo bem. E contigo?
+H Tudo bem, e consigo?
+H Está tudo bem e você, bem disposto?
+H Está tudo bem. Obrigada.
+H Mais ou menos, e contigo?
+H Está tudo óptimo, e consigo?
+H Está tudo. E consigo?
+H Tudo e consigo?
+H Sim, está tudo e contigo?
+H Sim, estou muito bem disposto e tu?
+H Está tudo e contigo?
+H Está tudo, e contigo?
+H Nem por isso, estou doente, e consigo?
+H Comigo está tudo! E contigo? Andas animado?
+R Eu estou bem-disposto. Tem vontade de conversar agora?
+3
+H Sim, claro que sim.
+H É sempre bom falar com alguém novo!
+H Estou com bastante trabalho mas podemos falar um bocadinho.
+H Claro que tenho.
+H Sim, já tenho disposição para conversar.
+H Tenho sim!
+H Sim, diga.
+H Sim, pode ser, na boa!
+H Sim, tenho!
+H Sim, estou com bastante vontade de conversar.
+H Sim, pode ser.
+H Tenho sim.
+H Sim, eu tenho. Gosto muito de falar.
+H Sim, tenho bastante!
+H Sim, gostava de conversar um bocado.
+H Tenho sim!
+H Sim, vamos!
+H Sim, claro, vamos conversar.
+H Sim, vamos conversar!
+H Pode ser
+H Sim, claro.
+H Claro, estou sempre pronto para conversar.
+H Sim e você?
+H Tenho sim.
+H Sim tenho algum tempo.
+H Sim, claro.
+H Sim, gostava de tomar um café?
+H Sim, tenho.
+H Sim, posso falar!
+H Sim, estou num dia para uma boa conversa.
+H Sim, agora apetece-me conversar.
+H Tenho bastante vontade, de que é que vamos falar?
+R Muito bem, falaremos dos nossos gostos. O que é que mais gosta de fazer?
+4
+H Gosto muito quando vou a casa da minha filha jogar à bola com os meus netos.
+H O que me traz mais prazer na vida é passar tempo com a minha família.
+H Jantar com a família.
+H Gosto muito de estar com a minha família mas também aprecio sair com os meus amigos.
+H Gosto de conversar em família.
+H Eu gosto muito de estar com os meus familiares.
+H Gosto de passar tempo em casa com a minha família.
+H Gosto de ir fazer escalada com o meu irmão e primos.
+H O que mais gosto é passar tempo com a minha família.
+H Eu adoro jantar com a minha família.
+H Adoro passar tempo com a minha família.
+R Tem muitos familiares que vivam perto?
+5
+H Felizmente tenho possibilidade de poder estar frequentemente com a maioria deles.
+H Sim tenho a minha filha que mora a uns 20 minutos daqui.
+H A minha família vive toda aqui perto, somos vizinhos.
+H Bem perto.
+H Sim, o meu irmão vive na mesma cidade que eu.
+H Sim, quase toda a minha família vive na mesma cidade que eu.
+R Ainda bem, fico contente. Agora gostaria de saber a sua comida preferida.
+6
+H Infelizmente não, vivem todos no norte do país ou no estrangeiro.
+H Não, não tenho, infelizmente.
+H Infelizmente não.
+H Infelizmente não tenho. Estão na França.
+H Nem por isso.
+H Não, estão a viver fora do país.
+H Nem por isso, os mais perto vivem a uma hora.
+R É uma pena, às vezes a vida podia ser mais como nós queremos. Mas para além disso, não há nada que aprecie fazer?
+7
+H Não podendo estar em casa rodeada de pessoas, gosto de dar longos passeios pela cidade.
+H Adoro viajar e conhecer novas culturas.
+H Bem, eu gosto de passear com os meus amigos ou de fazer caminhadas.
+H Gosto muito de passear e conhecer sítios novos. Não sou pessoa para passar os dias em casa!
+H Então, gosto muito de sair de casa e dar longos passeios...
+H Eu gosto de sair à noite e beber uns copos ou então ver o pôr do sol num miradouro com amigos.
+H O que mais gosto de fazer é estar em contacto com a natureza e conhecer novas cidades!
+H Gosto muito de sair de casa, apanhar ar, visitar sítios novos!
+H Gosto muito de ir passear e apanhar sol.
+H Gosto muito de passear por Lisboa.
+H Eu gosto de imenso de sair com amigos e conhecer novos locais e restaurantes.
+H Gosto muito de dar uma voltinha e ir ao café.
+H Gosto bastante de ir a miradouros.
+H Gosto de passear e não estar sempre em casa.
+H Eu gosto muito de passear à beira-mar.
+H Gosto de dar umas voltas pela cidade.
+H Gosto de dar umas voltas num jardim, talvez ler um livro ou beber uma cerveja com um amigo.
+H Eu por norma gosto de estar fora de casa, conhecer novos sítios!
+H Adoro sair de casa para um passeio.
+H Também gosto de explorar o mundo e passear sempre que posso.
+H A minha atividade favorita é sentar-me num banco de jardim e ler um bom livro.
+H O que mais gosto de fazer é passear no parque com o meu cão, fazer jogging e passear à beira mar.
+H Adoro ir à biblioteca.
+H Caminhar e ir às compras
+H Passear, ouvir musica e viajar.
+H Olha, eu gosto de passear pelo jardim, ir ao cinema e de ir tomar um café com os meus amigos.
+H Gosto de sair de casa e passear por aí.
+H Gosto de passear pelos parques e conviver com a natureza. E você?
+H Olhe, gosto muito de passear e de poder ouvir os pássaros, sentir o vento, ver o mar.
+R Onde é que gosta mais de ir?
+8
+H Quando está sol, adoro passear pelo parque das nações, junto ao rio.
+H Adoro ir ver o mar!
+H Gosto muito de passear à beira-mar, principalmente num fim de tarde do verão.
+H Gosto muito de passear pelo jardim da Estrela!
+H Gosto muito de ir à praia...
+H Gosto de ir a miradouros.
+H O meu sítio preferido para estar no exterior é a praia!
+H Gosto de passear pelos parques da cidade, principalmente quando está bom tempo como hoje!
+H Gosto muito de passear na praia. E você?
+H Gosto de passear à beira do Tejo, principalmente quando está um dia de sol.
+H Gosto de ir ao café. Sair faz bem.
+H Gosto de ir até ao largo do Rato
+H Gosto de passear em jardins.
+H Gosto muito de ir à avenida marginal.
+H Gosto de ir à floresta apanhar cogumelos
+H A um parque, de preferência bastante verde.
+H Gosto de estar em Lisboa, na praça do comércio.
+H O meu sítio favorito é o parque da cidade.
+H Prefiro zonas exteriores para aproveitar melhor a natureza, pelo que o parque da cidade é a minha parte favorita da zona. E tu, que achas?
+H Mercados e praia.
+H De todos os sítios tenho sempre preferência pelo mercado, divirto-me sempre a ouvir a confusão toda!
+R Também prefiro estar no exterior com bom tempo. O que faz quando está chuva ou frio?
+9
+H Ui, quando está frio fico por casa a ver televisão no sofá!
+H Fico em casa com amigos a ver um filme.
+H Quando está chuva ou frio há menos coisas para fazer por isso se não estiver bom tempo fico em casa, normalmente a ver um filme ou série.
+H Nesses dias fico em casa a ver um filme ou uma série.
+H Aí prefiro estar em casa no quentinho!
+H Costumo ficar na minha residência.
+H Quando está frio, junto-me com amigos em casa e vemos um filme, de lareira ligada!
+H Quando está frio não me apanham lá fora! Prefiro ficar em minha casa, onde está sempre quentinho.
+H Gosto de estar à lareira para estar quentinho.
+H Prefiro ficar em casa a ver um filme ou uma série
+H Quando chove ou está frio, fico por casa e vejo televisão.
+H Quando está frio apenas fico em casa, não dá para passear assim.
+H Acabo por ficar em casa ou ir a casa de amigos.
+H Quando chove gosto de ficar em casa a cozinhar.
+H Nesse caso fico em casa a descansar
+H Aí evito um pouco mais o exterior. Prefiro ficar por casa.
+H Eu gosto de estar em casa de um amigo a falar ou ver um filme.
+H Oh, quando está frio e chuva fico em casa a ler.
+H Quando está mau tempo costumo passear por zonas interiores ou então ir a cada de alguém.
+H Vou a café beber um belo café ou então a cada de um familiar.
+H Oh quando está chuva, o melhor é estar dentro de casa ou num sítio coberto e quente. Não acha?
+H Normalmente fico em casa a ver televisão, especialmente o "Você na TV" e "A Tarde é Sua".
+R Portanto estou a ver que dispensa o frio.
+10
+H É bem verdade! Nada me tira de casa com mau tempo.
+H Sim, não gosto nada.
+H Sim, sou uma pessoa muita friorenta.
+H Claramente! Prefiro o sol e o calor.
+H Sim! Sou mesmo uma pessoa do Verão.
+H Sim, toda a gente prefere o solzinho...
+H Sim, detesto apanhar frio e chuva.
+H Sim!! Não gosto nada de frio!
+H Sem dúvida!
+H Deus me livre!
+H É verdade, sou muito friorento
+H Sim, aqui faz muito frio. Prefiro o verão.
+H Sim, passo bem sem ele.
+H Sim, sou uma pessoa friorenta.
+H Dispenso o frio, é desconfortável.
+H Sim, não gosto muito do frio
+H Sim, o frio impede muita coisa boa.
+H Sim, não gosto nada do frio!
+H Sim, quem me dera poder andar sempre na rua, mas o frio faz-me mal!
+H Claro, por mim seria sempre Verão.
+H Sim, não gosto de andar com muita roupa em cima de mim.
+H Sim, prefiro um clima mais quente e que consiga sair. E você? Não prefere um dia de sol em vez de chuva de inverno?
+H Completamente, não gosto mesmo nada. Fico sempre doente!
+R Já somos dois que não gostam do frio. Falando agora noutras preferências, qual é a sua comida de eleição?
+11
+H O meu sítio preferido para andar é no centro comercial.
+H Na maior parte das vezes o meu local favorito é o centro comercial. Muitas vezes não compro nada, mas adoro estar a par das novidades!
+H Gosto de ir ao centro comercial e você?
+H O sítio onde eu vou mais é o centro comercial.
+H Ao Colombo, tem todas as lojas que quero e ao El corte inglês que é em tudo.
+H Eu gosto muito de ir ao centro comercial, principalmente, e tu?
+H Adoro ir ao centro comercial!
+R Eu não gosto de centro comerciais. No geral costumam ser aborrecidos. O que é que lá costuma fazer?
+12
+H Eu gosto de ir comprar novas roupas para estar fashion todos os dias.
+H A minha parte favorita é descobrir quais são as novas modas nas lojas de vestidos.
+H Comprar roupas e bijuteria.
+H Gosto muito de ver as montras de roupa.
+H Comprar vestidos.
+H Eu gosto de ir ao cinema, de ir comer alguma coisa e principalmente de ir comprar roupas.
+H Podes ver roupas novas e cores bonitas!
+R Tem por hábito comprar roupas?
+13
+H Principalmente no Natal gosto de ir ao centro comercial comprar roupa para oferecer à família.
+H Como disse, raramente compro coisas. Mas, principalmente na época de Natal, sinto que roupa é das melhores prendas que se pode oferecer.
+H Sim muitas vezes como prenda para outras pessoas
+H Sim tenho. Compro todos os meses para dar aos meus.
+H Ocasionalmente.
+H Sim, mas normalmente é mais para oferecer a alguém do que para mim.
+H Costumo comprar roupas para oferecer à minha mãe!
+R Pois às vezes sabe bem oferecer uma peça bonita, mesmo que seja a nós próprios. O que mais faz? 
+14
+H Eu também vou ao cinema!
+H Quando me sobram uns trocos ao final do mês, gosto sempre de ir ver um bom filme ao cinema.
+H Também costumo ir ao cinema.
+H Também vou por vezes ao cinema com os meus netos.
+H Quando há algum filme do meu interesse vou ao cinema.
+H Também gosto muito de ir ao cinema.
+H Posso também ir ao cinema ver um filme com amigos!
+R Muito bem. Costuma comprar pipocas quando vai ao cinema?
+15
+H Não gosto muito de pipocas, infelizmente.
+H Não gosto de comprar pipocas porque não me fazem lá muito bem ao estômago.
+H Não por acaso não gosto nada de pipocas
+H Não gosto nada de pipocas. Além disso não as posso comer porque fazem mal à Saúde.
+H Só se tiver fome, não sou grande fã
+H Não, não gosto nada de comer pipocas!
+H Não, não gosto de comer pipocas no cinema!
+R É a primeira pessoa que eu conheço que não gosta. O que é que lhe agrada comer?
+16
+H Não sei se tenho uma favorita, gosto de comer um pouco de tudo.
+H Agora é que me fazes uma pergunta difícil! Há tanto por onde escolher!
+H Sou uma foodie. Não consigo escolher um só prato favorito..
+H Não sei.. gosto de imensas coisas e há tanta variedade de comida que é difícil escolher apenas uma.
+H Não sei... Gosto de tantos pratos!
+H Hum, pergunta difícil... Tenho muitas!
+H Não sei bem, gosto de muitas coisas.
+H Tenho várias, não consigo decidir!
+H Não sei bem... Tenho tantas comidas das quais gosto! É difícil escolher uma.
+H Hum... boa questão...
+H Gosto de tantas, é difícil escolher
+H Tenho tantas... Não sei por onde escolher.
+H Gosto de muitos pratos, não sou esquisito.
+H Não tenho bem uma comida favorita.
+H Boa comida portuguesa.
+H Isso é uma questão muito difícil.
+H Pois, isso é uma pergunta complicada.
+H Depende do momento, tenho várias!
+H Nem sei, são tantas que eu gosto.
+H Essa pergunta é difícil, tenho muitas comidas favoritas, não sei qual delas prefiro.
+H Tenho várias não consigo escolher uma.
+H Tenho muitas, não lhe consigo dizer uma em especial.
+H Adoro comida portuguesa, mas também gosto de uma boa pizza ou sushi
+H Não consigo dedicar-se entre cabrito assado e bacalhau com natas.
+H Ai, essa pergunta é mesmo muito difícil de te responder. Tenho muitas!
+H Não consigo escolher! São tantas coisas boas.
+H Não sei bem, existe muitas opções que me agradam
+H É difícil de decidir, gosto de muitas comidas diferentes.
+H É uma pergunta difícil, há tantos pratos bons!
+R Certo, então vamos por partes. Qual é a sua carne favorita?
+17
+H Gosto muito de frango assado.
+H Hum, diria uma boa posta de vitela.
+H Carne de porco.
+H Gosto de carne de vaca.
+H Gosto muito de vitela!
+H Já não consigo comer carne com estes dentinhos, filho.
+H Gosto de carne de vaca, tem mais sabor.
+H Nada melhor que um bom bife vaca.
+H Não como carne.
+H A minha carne preferida e canguru.
+H De carne, eu gosto muito de frango.
+H Carne de vaca.
+H Frango talvez.
+H A minha carne preferida é a de vaca.
+H Carne de Frango de preferência.
+H Frango, sem dúvida.
+H A minha carne favorita é carne de frango.
+H Não costumo comer carne, mas a minha favorita é porco.
+H A carne de vaca Arouquesa dá os melhores bifes!
+H Carne de aves.
+H Gosto muito de um bom cabrito.
+H Um bife do lombo.
+H A minha carne preferida é cabrito.
+H É frango assado!
+H Carne de vaca sem duvida!
+H Gosto de tudo o que é carne grelhada!
+H Gosto bastante de frango.
+R E em relação ao peixe?
+18
+H Um bom bacalhau sabe sempre bem.
+H Como bom português, bacalhau sem dúvida!
+H Gosto muito. Talvez bacalhau.
+H Gosto de bacalhau.
+H Gosto muito de bacalhau.
+H Adoro pratos com bacalhau! O meu preferido é bacalhau à Brás.
+H Robalo ou filetes de pescada como os da minha mãe
+H Gosto muito de bacalhau!
+H Sem dúvida que o meu predilecto é bacalhau, não acha?
+H Gosto muito de bacalhau à Brás.
+H Ah isso é fácil! Linguado.
+H Um bacalhau é sempre bom.
+H Pratos de bacalhau.
+H O meu peixe preferido é o atum, mas também gosto muito de bacalhau.
+H Gosto de truta salmonada
+H Um bom bacalhau com broa.
+H Gosto de dourada e bacalhau.
+H Bacalhau, sem dúvida!
+H Gosto imenso de bacalhau, é caro mas é delicioso.
+H Gosto muito de todos os tipos de peixe, excepto pescada. Mas se tivesse de escolher um, diria que bacalhau é o que mais gosto, por ser tão versátil.
+H É o bacalhau.
+H O bacalhau é o que gosto mais e o que mais como.
+H Desde que seja grelhado gosto de todos mas também gosto de bacalhau cozido.
+H O meu peixe favorito é bacalhau.
+H É bacalhau com natas!
+H Adoro bacalhau!
+H Peixe já é mais difícil, mas talvez salmão. E o teu?
+H Adoro bacalhau, especialmente bacalhau à brás
+H Adoro bacalhau confecionado de qualquer forma.
+R Realmente é dos melhores peixes. E qual é a melhor sobremesa para si?
+19
+H Gosto muito do tiramissu que a minha filha faz, quando vamos jantar a casa dela.
+H Um bom tiramissu!
+H Sem dúvida panacota.
+H Gosto de gelado italiano.
+H Adoro um bom tiramissu.
+H Se tivesse de escolher uma sobremesa, diria tiramissu. A comida italiana é óptima!
+H A minha é sonhos, mas o meu netinho Henrique adora tiramissu...
+H Para mim, a melhor sobremesa é gelado italiano.
+H Tiramissu! Quando estive em Itália comia um quase todos os dias!
+H Um bom tiramissu italiano!
+H A minha sobremesa favorita é o tiramissu.
+H A minha melhor sobremesa é o magnífico gelado confeccionado em Itália.
+H Olhe, já comia um bom tiramissu. É uma boa sobremesa italiana.
+H A minha sobremesa preferida é tiramissu.
+H Um pizza de nutella!
+H Adoro sobremesa italiana!
+H Adoro um bom tiramissu.
+H Para sobremesa adoro comer tiramissu, é uma sobremesa italiana.
+H Gelado, sem dúvida!
+H É tiramissu.
+H Para mim é o tiramissu.
+H Um Gelado italiano.
+H É tiramissu! Não sei se já provaste essa sobremesa italiana.
+H Adoro panacota!
+H Oh um bom tiramissu e o melhor que se pode arranjar! E a sua?
+H Acho que é tiramissu.
+H Panacota definitivamente.
+R Itália é um dos países com melhor comida. Especialmente, com a melhor pizza.
+20
+H Sem dúvida, a cozinha italiana tem imensos pratos deliciosos, as massas são mesmo boas, a enorme variedade de pizzas e os gelados também são óptimos.
+H Aprecio muito a comida italiana. Só de pensar nos queijos, pizzas, lasanhas, parmegianas. Que delicia!
+H A pizza napolitana é divinal, tal como o ragu.
+H Também gosto muito de massas.
+H Não poderia estar mais de acordo. Impossível resistir a lasanha e aos canellonis.
+H É a melhor cozinha! Vou frequentemente a restaurantes italianos, comer uma boa lasanha ou um risotto.
+H É, ele teve em Bolonha e está sempre a falar da massa...
+H Sim, e para além da pizza também adoro pasta al pesto e lasanha.
+H Sim, e lasanha!
+H Pizza e não só! Pasta, lasanha,...
+H Quem diz pizza diz também um bom ragu!
+H É verdade! E não só: lasanha, pasta,...
+H O melhor deles todos e sem dúvida a lasanha, seja ela vegetariana ou normal.
+H Sem dúvida, já lá fui e comi uma boa pizza, uma boa massa... aquilo é um mundo.
+H Sem dúvida, e a lasanha é algo incrível!
+H Sim e as massas e as lasanhas também são ótimas!
+H Sim, mas não nos podemos esquecer da pizza.
+H Mas a carbonara é melhor
+H Para não falar da pasta. Tanta boa combinação.
+H Sem dúvida, em particular lasanha e pasta!
+H Também adoro as lasanhas e as pastas.
+H Pizza é a minha comida favorita, mas a gastronomia italiana é muito boa, também gosto de lasanha e pasta.
+H Realmente, não há nada como uma verdadeira pizza napolitana... Mas se tivesse de comer um único prato para o resto da vida seria risotto. Ou carbonara.
+H Sim e com a melhor lasanha e pasta.
+H É verdade. E as lasanhas e pastas também não ficam atrás.
+H Também gosto de lasanha e tagliatelle ragu. E os tortellini são incríveis.
+H Concordo, para não falar de lasanha e pasta.
+H Ai, eu adoro a cozinha italiana. Era capaz de viver só de isso!
+H Além da pizza há lasanha, pasta, risotto, Itália tem mesmo a melhor comida!
+H Sim, mas uma boa lasanha faz-me ganhar o dia! E pasta com pesto é maravilhoso.
+H Sim, também gosto imenso de lasanha e pasta.
+H Adoro comida italiana! Lasanhas e pasta são a minha perdição.
+R Nem mais, é mesmo impossível resistir a esses pratos italianos.
+21
+H Olhe gostei muito de falar consigo, mas vou ter de ir andando, ainda tenho de passar na farmácia antes da hora de jantar.
+H Bem, tenho que ir embora que vou receber uma visita daqui a 10 minutos. Foi um prazer falar contigo!
+H Estou a gostar da conversa mas preciso de ir trabalhar. Foi um prazer.
+H Tenho de ir andando, gostei muito de falar consigo.
+H Agora vou ter que ir. Já se faz tarde e tenho que tratar de algumas coisas ainda hoje. Adeus, foi um prazer falar consigo.
+H Tenho de ir andando, preciso de acabar a tese...
+H Sim sim, em falar nisso, lembrou-me que devo agora ligar-lhe.
+H Bem, tenho que ir jantar, gostei muito da conversa!
+H Obrigada pela conversa, mas tenho que ir preparar o jantar agora! Foi um prazer falar contigo!
+H Esta conversa deu-me fome. Lamento, mas tenho de ir! Gostei muito deste pedacinho.
+H Bem, são horas de ir dormir. Foi um prazer falar consigo.
+H Bem, agora tenho de ir, vou ter ensaio. Gostei de falar contigo!
+H Bem... Tenho de ir! Gostei muito de falar consigo!
+H É, é... Olhe, eu tenho que ir aos correios. Muito obrigado pela sua companhia.
+H Bem, por falar nisso, preciso de fazer o meu jantar. Foi uma prazer falar contigo!
+H Bom, foi um prazer falar consigo mas agora tenho de ir.
+H Foi muito agradável, esta conversa, mas agora tenho de ir.
+H Bem, tenho de ir indo.
+H Olha, entretanto o tempo passa e tenho de ir andando. Mas foi bom falar contigo.
+H Verdade! Desculpa, mas agora tenho de ir. Foi um prazer falar contigo.
+H Bem, já são horas de ir jantar, tenho de ir.
+H Tenho que cozinhar.
+H Desculpa, mas agora tenho de ir, tenho um compromisso. Obrigado e fui um prazer falar contigo.
+H Bem, foi um prazer falar consigo mas tanta conversa sobre comida deu-me fome. Tenho de ir pensar no jantar.
+H Adoraria ficar a conversar mas tenho um compromisso daqui a pouco e vou ter que ir.
+H Olhe, vou ter de me ir embora. Estão a chamar-me para ir ajudar a arrumar o quarto. Gostei muito de falar consigo.
+H Tenho de ir, o comboio é daqui a 5 minutos
+H Agora falamos noutro dia, tenho que ir buscar o meu filho à escola!
+H Peço desculpa, mas deixei o cabrito a assar e tenho de regressar a casa antes que cause um incêndio.
+H Olha, esta conversa toda de comigo, está é a dar-me fome. Vou indo para a casa! Temos de voltar a falar um dia destes!
+H Bom, agora vou ter que ir embora, tenho outras coisas a fazer.
+H Exatamente!! Infelizmente tenho de ir embora, mas foi um grande prazer falar consigo
+H Gostei muito de falar consigo, mas agora tenho de ir, tenho de estudar.
+H Completamente! Olhe infelizmente tenho de ir embora que o programa da Cristina acabou de começar.
+R Percebo completamente. Também foi um prazer falar consigo.
+22
+H Até uma próxima!
+H Talvez numa próxima teremos oportunidade de conversar um pouco mais. Até logo.
+H Conversamos mais logo!
+H Obrigada, igualmente.
+H Até a próxima!
+H Adeus.
+H Então até logo.
+H Para mim também é sempre um prazer! Vê-mo-nos por aí!
+H Prazer falar consigo também. Adeus
+H Até à próxima!
+H Até logo!
+H Boa noite.
+H Grande abraço!
+H Tá, obrigado, eu também! Até à próxima.
+H Obrigado, até logo!
+H Obrigada, até logo.
+H Até mais logo.
+H Até à próxima
+H Adeus!
+H Até às próxima!
+H Também foi um prazer, até logo!
+H Igualmente. Obrigada
+H Até já!
+H Nesse caso, até à próxima.
+H Obrigada e igualmente. Até logo
+H Adeus e continuação de um bom dia.
+H Adeus! Até à próxima
+H Até um dia.
+H Até breve!
+H Okay, então até logo!
+H Tenha um bom dia
+H O prazer foi todo meu. Tenha um bom resto de dia.
+R Até logo.
