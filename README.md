@@ -1,5 +1,5 @@
 # Thesis
-## Software for the Natural Language Processing
+## Software for the Natural Language Processing and Utterance Generation system
 
 #### The Software used in the final system of this thesis is under the directory **"final"**
 
