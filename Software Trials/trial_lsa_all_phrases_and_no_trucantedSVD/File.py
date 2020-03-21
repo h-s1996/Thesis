@@ -72,7 +72,7 @@ class File:
         self.x = []
         self.y = []
         self.robots_vectors = []
-        file = open('/content/thesis/finaltextfile.txt', 'r')
+        file = open('/content/finaltextfile.txt', 'r')
         groups = []
         group = False
         try:

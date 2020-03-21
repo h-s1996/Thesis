@@ -1,11 +1,10 @@
 # coding: utf-8
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
 from nltk.stem import RSLPStemmer
-import concurrent.futures
 import string
 import numpy
+
 
 class LSA:
 
@@ -19,13 +18,12 @@ class LSA:
                           "pelo", "isso", "esse", "essa", "esses", "essas", "num", "numa", "nuns", "numas", "este", "esta", "estes", "estas", "isto",
                           "aquilo", "aquele", "aquela", "aqueles", "aquelas", "sem", "entre", "nem", "quem", "qual", "depois", "só", "mesmo", "mas"]
         self.phrases = phrases
-        self.features_utterance = self.get_features_utterance()
+        self.features_utterance = []
 
     @staticmethod
     def normalizer(x_abnormal):
         minimum = x_abnormal.min()
         maximum = x_abnormal.max()
-
         if minimum == maximum:
             return x_abnormal
         else:
@@ -33,7 +31,6 @@ class LSA:
             return x_new
 
     def tokenize(self, t):
-
         if self.stopwords:
             if t in self.stopwords:
                 return []
@@ -73,23 +70,13 @@ class LSA:
                 vocabulary.append(i)
         return vocabulary
 
-    def get_features_utterance(self):
+    def tf_idf(self):
         vec = TfidfVectorizer(min_df=self.min_freq,
                               stop_words=self.stopwords,
                               tokenizer=self.tokenize,
                               ngram_range=(self.ngram_min, self.ngram_max))
-        vec.fit_transform(self.phrases)
-        return vec.get_feature_names()
-
-    def tf_idf(self, examples, keywords):
-        if not keywords:
-            return []
-        
-        vec = TfidfVectorizer(stop_words=self.stopwords,
-                              vocabulary=keywords,
-                              tokenizer=self.tokenize,
-                              ngram_range=(self.ngram_min, self.ngram_max))
-        x = vec.fit_transform(examples)
+        x = vec.fit_transform(self.phrases)
+        self.features_utterance = vec.get_feature_names()
         return x.todense()
 
     def eliminate_dimensions(self, tfidf):
@@ -106,11 +93,7 @@ class LSA:
                 x = numpy.matrix.dot(numpy.matrix.dot(u[:, 0:k], eigenvalues[0:k, 0:k]), v[0:k, :])
                 return x
 
-    def train_phrases(self, keywords):
-        tfidf_utterance = numpy.array(self.tf_idf(self.phrases, self.features_utterance))
-        #tfidf_keywords = numpy.array(self.tf_idf(self.phrases, keywords))
-        #if tfidf_keywords.any():
-        #   return numpy.round(self.eliminate_dimensions(numpy.concatenate([tfidf_utterance, tfidf_keywords], axis=1)), 10)
-        #else:
+    def train_phrases(self):
+        tfidf_utterance = numpy.array(self.tf_idf())
         return numpy.round(self.eliminate_dimensions(tfidf_utterance), 10)
 

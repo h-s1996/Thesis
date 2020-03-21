@@ -76,6 +76,7 @@ R Ainda bem, fico contente. Agora gostaria de saber a sua comida preferida.
 6
 H Infelizmente não, vivem todos no norte do país ou no estrangeiro.
 H Infelizmente não.
+H Infelizmente não.
 H Infelizmente não tenho. Estão na França.
 H Nem por isso.
 H Não, estou a viver fora do país
