@@ -61,7 +61,7 @@ while True:
                 (sets.robot_ids_test[max_index][i] == j)):
             print(sets.test_phrases[max_index][i])
             print(db.get_robot_utterance(sets.robot_ids_test[max_index][i]))
-            j = j+1
+            j = j + 1
     
     if j == 22:
         break

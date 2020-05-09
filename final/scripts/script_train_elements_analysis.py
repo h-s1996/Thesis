@@ -58,13 +58,13 @@ while True:
         # Latent Semantic Analysis
         ###############################################################################
         lsa = LSA(MAX_GRAM, MIN_FREQ, P_EIG)
-        lsa_results = lsa.process_utterances_through_lsa(db.human_utterances)
+        lsa_results = lsa.process_utterances_through_lsa(x)
         print("LSA Results computed.")
         ###############################################################################
 
         ###############################################################################
         # Data Division
-        sets = Set(lsa_results, db.robot_ids, db.human_utterances, n_splits=5)
+        sets = Set(lsa_results, numpy.array(y), numpy.array(x), n_splits=5)
         ###############################################################################
 
         ###############################################################################
