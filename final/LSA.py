@@ -154,6 +154,5 @@ class LSA:
         :return: the LSA vector of the new human utterance
         :rtype: numpy array
         """
-        aux = human_utterances
-        aux.append(new_human_utterance)
+        aux = numpy.append(human_utterances, new_human_utterance)
         return self.process_utterances_through_lsa(aux)[-1]

@@ -38,8 +38,8 @@ class Database:
             line = file.readline()
             while line != '':  # The EOF char is an empty string
                 if line[0].isdigit():
-                    i += 1
                     group = Group(i)
+                    i += 1
                     self.groups.append(group)
                 else:
                     if group:

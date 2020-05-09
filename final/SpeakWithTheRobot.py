@@ -77,7 +77,7 @@ class SpeakWithTheRobot:
                     lsa.process_new_human_utterance(self.listen(), db.human_utterances))))
             elif c[0] == 't':
                 print(db.get_robot_utterance(naive.predict_new_robot_id(
-                    lsa.process_new_human_utterance("Olá", db.human_utterances))))
+                    lsa.process_new_human_utterance("Bom dia", db.human_utterances))))
                 print(db.get_robot_utterance(naive.predict_new_robot_id(
                     lsa.process_new_human_utterance("Como está tudo a andar?", db.human_utterances))))
                 print(db.get_robot_utterance(naive.predict_new_robot_id(
