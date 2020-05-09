@@ -11,6 +11,6 @@ In the directory **scripts** there are a couple of scripts that serve the follow
 3. **script_mfreq_ngram_peig** - test the influence of Minimum Document Frequency, Maximum N-Gram and Percentage of Cumulative Eigenvalues on the final performance.
 4. **script_output_analysis_false** - show utterances wrongly predicted by the system and the total probabilites, class probabilites and likelihood probabilites of the correct and predicted phrases.
 5. **script_output_analysis_true** - show a dialogue correctly predicted by the system.
-6. **script_results** - 
-7. **script_speak_with_the_robot** - 
+6. **script_results** - display the values of the performance of the final system.
+7. **script_speak_with_the_robot** - program to use the complete software.
 8. **script_train_elements_analysis** - test the influence of a different number of training utterances per class on the final performance.
