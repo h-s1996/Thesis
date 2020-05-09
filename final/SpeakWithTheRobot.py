@@ -56,7 +56,7 @@ class SpeakWithTheRobot:
         """
         tts = gTTS(text=utterance, lang=self.lang, slow=self.slow)
         tts.save("soundfile.mp3")
-        system("mpg123 soundfile.mp3")
+        system("soundfile.mp3")
 
     def speaking_to_the_robot(self, lsa, naive, db):
         """

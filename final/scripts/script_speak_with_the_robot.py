@@ -3,7 +3,7 @@ from final.Database import Database
 from final.LSA import LSA
 from final.Set import Set
 from final.NaiveBayesClassifier import NaiveBayesClassifier
-from final.SpeakWithTheRobot import  SpeakWithTheRobot
+from final.SpeakWithTheRobot import SpeakWithTheRobot
 import numpy
 
 ###############################################################################
